@@ -3,8 +3,9 @@ package br.com.inmetrics.teste.support;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import org.json.JSONObject;
-import br.com.inmetrics.teste.enums.ChavesSessaoWeb;
-import br.com.inmetrics.teste.util.Connections;
+
+import br.com.inmetrics.main.enums.ChavesSessaoWeb;
+import br.com.inmetrics.main.util.Connections;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import net.serenitybdd.core.Serenity;
@@ -29,6 +30,7 @@ public class Hooks extends Connections {
 				driver.close();
 			
 		} catch (Exception e) {
+			if(driver!=null)
 			driver.close();
 		}
 		
