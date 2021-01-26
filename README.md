@@ -64,9 +64,9 @@ Para executar os testes web via **Maven** execute o seguinte comando:
 ```
 mvn clean verify -Dcucumber.filter.tags="@web"
 ````
-Para executar os testes web via **Maven** execute o seguinte comando:
+Para executar os testes api via **Maven** execute o seguinte comando:
 ````
-mvn clean verify -Dcucumber.filter.tags="@web"
+mvn clean verify -Dcucumber.filter.tags="@api"
 ````
 
 Os relatórios serão gerados no caminho abaixo:
