@@ -1,5 +1,9 @@
 pipeline{
     agent any
+    
+    environment{
+    	PATH = "D:\Programas\Maven\apache-maven-3.6.3\bin:$PATH"
+    }
     stages{
         stage('Git Repository Clone'){
             steps{
