@@ -1,0 +1,20 @@
+pipeline{
+    agent any
+    stages{
+        stage('Git Repository Clone'){
+            steps{
+                script{
+                     git credentialsId: 'git_credentials', url: 'https://github.com/caslucas/inmetrics-automation.git'
+                }
+            }
+        }
+        stage('Maven'){
+        	steps{
+        		sh "mvn clean verify"
+        	}  
+        }
+    }
+}
+
+
+
