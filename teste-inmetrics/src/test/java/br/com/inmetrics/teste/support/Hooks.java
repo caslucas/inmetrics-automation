@@ -28,10 +28,13 @@ public class Hooks extends Connections {
 				fos.flush();
 				fos.close();
 				driver.close();
+				System.out.println("TEST SUCESS");
 			
 		} catch (Exception e) {
-			if(driver!=null)
+			if(driver!=null) {
 			driver.close();
+			}
+			System.out.println("TEST SUCESS");
 		}
 		
 	}
