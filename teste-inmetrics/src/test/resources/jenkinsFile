@@ -14,7 +14,7 @@ pipeline{
         }
         stage('Maven'){
         	steps{
-        		echo "mvn clean verify -Dcucumber.filter.tags=\"@web\""
+        		sh "mvn clean verify -Dcucumber.filter.tags=\"@web\""
         	}  
         }
     }
